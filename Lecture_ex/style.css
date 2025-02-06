@@ -3,3 +3,15 @@
     height: 150px;
     background-color: yellow;
 }
+
+.yellow-text{
+    color: yellow;
+}
+
+.blue-text{
+    color: blue;
+}
+
+#heading {
+    color: red;
+}   

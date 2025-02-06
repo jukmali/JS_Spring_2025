@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM scripting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">Heading</h1>
+    <h2 class="blue-text">Heading 2</h2>
+    <h2 class="blue-text">Another Heading 2</h2>
+    <p class="blue-text">Paragraph</p>
+
+    <div class="square"></div>
+
+    <script>
+        heading = document.getElementById("heading");
+        heading.innerHTML = "New heading";
+
+        var h2 = document.getElementsByTagName("h2");
+        for (var i=0; i<h2.length; i++){
+            h2[i].style.color = "red";
+        }
+
+        document.body.style.backgroundColor = "lightgray";
+        h2[0].style.display = "none";
+        h2[0].style.display = "block";
+
+        var item = document.getElementsByClassName("square");
+        var y = item[0];
+
+        y.style.position = "relative";
+        y.style.left = "100px";
+
+        setInterval(function(){
+            doMove();
+        }, 1000);
+
+        /*function doMove(){
+            var topval = parseInt(y.style.left);
+            y.style.left = (topval + 10) + "px";
+        
+           consle.log("Move to " + topval + "px");
+        } */
+
+        var newItem = document.createElement("p");
+        newItem.innerHTML = "This is new paragraph";
+        newItem.setAttribute("id", "newData");
+
+        document.body.appendChild(newItem);
+        
+    </script>
+    
+</body>
+</html>
