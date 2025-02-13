@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My forms</title>
+</head>
+<body>
+    <h1>Please fill in your data</h1>
+
+    <form action="#" name="myForm" onsubmit="return validateForm()">
+        <label for="name">Firstname:</label>
+        <input type="text" id="fname" name="fname"> <span id="feedback"></span><br><br>
+
+        <label for="lname">Lastname:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <input type="submit" value="Send it">
+
+    </form>
+
+    <p>
+        <input type="checkbox" name="comments" id="comments" onClick="showExtraFields()">I want to leave comments   
+    </p>
+
+    <p>
+        <fieldset id="myFieldset">
+            <legend>Additonal information</legend>
+            <textarea name="message" id="message" col="30" rows="10">Write your feedback here</textarea>
+        </fieldset>
+    </p>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>

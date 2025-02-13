@@ -1,3 +1,6 @@
+var comment = document.getElementById("myFieldset");
+comment.style.display = "none";
+
 function myFirstFunction(number) {
     alert("My first JS function " + number);
 
@@ -20,4 +23,21 @@ function showXY(event){
 
 function buttonFunction(){
     alert("Button clicked");
-}   
+} 
+
+function showExtraFields(){
+    var comment = document.getElementById("myFieldset");
+    
+        comment.style.display = "block";
+    
+}
+
+function validateForm(){
+    alert("Form submitted");
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "" || x == null || x.length < 3) {  
+        document.forms.myForm.fname.style.borderColor = "red";
+        document.getElementById("feedback").innerHTML = "<b>*Fill in properly</b>";
+        return false;
+    }
+}
